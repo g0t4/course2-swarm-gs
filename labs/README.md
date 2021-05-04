@@ -5,4 +5,4 @@ To help you follow along I've included instructions for various methods to creat
 Of course, I elaborate on these in the course. Nonetheless I've included some notes, files and commands to copy/pasta for your convenience.
 
 - [vagrant local cluster](./vagrant/Vagrantfile) - see the embedded notes inside the Vagrantfile 
-- 
+- ...
