@@ -1,14 +1,1 @@
-{
-  "ruby.useBundler": true,
-  // https://github.com/rubyide/vscode-ruby/blob/master/docs/formatting.md
-  "ruby.format": "rubocop",
-  "ruby.codeCompletion": "rcodetools",
-  "ruby.intellisense": "rubyLocate",
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true
-    }
-  },
-  // https://github.com/rubyide/vscode-ruby/blob/master/docs/language-server.md
-  "ruby.useLanguageServer": true
-}
+{}
