@@ -14,8 +14,7 @@ services:
         - "node.role == manager"
 
 ## Notes
-#
-#
+# 
 # visualizer, great for learning
 #   repo:
 #     https://github.com/dockersamples/docker-swarm-visualizer
@@ -29,7 +28,3 @@ services:
 #       brew install jq # macOS
 #       apt-get install -y jq # ubuntu
 #
-# compose-spec:
-#   repo:
-#     https://github.com/compose-spec/compose-spec/blob/master/spec.md
-#   version is optional now
