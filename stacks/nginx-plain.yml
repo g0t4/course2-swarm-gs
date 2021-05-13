@@ -1,0 +1,12 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
+
+version: "3"
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "9080:80/tcp"
+    deploy:
+      replicas: 1
