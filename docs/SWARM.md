@@ -8,6 +8,14 @@ pass `--help` to any command:
 - `docker stack --help`
 - `docker stack deploy --help`
 
+key cli commands with great help output:
+- `docker service create --help` # service options with concise explanations
+  - `docker container run --help` # container options for standalone nodes (applicable beyond standalone)
+- `docker network create --help` # network options
+- `docker volume create --help` # volume options, minimal
+- `docker secret create --help` # secret options, minimal too
+- `docker config create --help` # config options, minimal too
+
 docs - command line references are fantastic:
 - ref docs are **hit or miss** so below I link to the gold (stuff beyond what you get in the builtin CLI `--help`)
 - management commands that are swarm specific/originated:
