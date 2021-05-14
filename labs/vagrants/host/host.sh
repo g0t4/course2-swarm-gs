@@ -1,19 +1,23 @@
 #!/usr/bin/env bash
 
-echo '1. query running vms via vagrant status'
+echo '[WHAT] Find running vagrant vms...'
 running_vms=$(vagrant status --machine-readable | grep 'state,running' | cut -d',' -f2 | sort | uniq)
 running_vms_space_delimited=${running_vms[@]}
-echo '  running: '${running_vms_space_delimited}
-
-echo '2. write vagrant ssh config options for faster, native/direct ssh access to running vms'
-vagrant ssh-config ${running_vms_space_delimited} > ~/.ssh/config.d/vagrant_swarmgs
+echo '[INFO] found: '${running_vms_space_delimited}
 echo
 
-echo '3. adding docker ssh contexts for running vms (unless they already exist in which case this is ignored and thus idempotent')
-for vm in $running_vms; do 
+_ssh_config_file="~/.ssh/config.d/vagrant_swarmgs"
+echo "[WHAT] vagrant ssh-config > ${_ssh_config_file}"
+echo "[ WHY] faster native ssh access to VMs vs `vagrant ssh`"
+echo "[ WHY] needed for docker context to dockerd on VMs"
+vagrant ssh-config ${running_vms_space_delimited} > "${_ssh_config_file}" 
+echo
+
+echo '[WHAT] docker context create ssh to VM dockerd(s)'
+echo '[ FYI] ignore already created message, this is idempotent'
+for vm in $running_vms; do
   docker context create \
     --docker "host=ssh://$vm" \
     --default-stack-orchestrator swarm \
-    $vm
+    $vms
 done
-echo
