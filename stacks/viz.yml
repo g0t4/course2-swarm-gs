@@ -14,17 +14,6 @@ services:
         - "node.role == manager"
 
 ## Notes
-# 
-# visualizer, great for learning
-#   repo:
-#     https://github.com/dockersamples/docker-swarm-visualizer
-#     built with javascript, have at it if you want to hack in changes
-#   dockerhub: dockersamples/visualizer
-#     inspect manifest:
-#       docker manifest inspect dockersamples/visualizer | jq '.'
-#     see only compat with amd64 (currently):
-#       docker manifest inspect --verbose dockersamples/visualizer | jq '.Descriptor.platform'
-#     install `jq` (CLI for json processing/querying/formatting):
-#       brew install jq # macOS
-#       apt-get install -y jq # ubuntu
-#
+# https://github.com/dockersamples/docker-swarm-visualizer
+# built with javascript, easily modified
+# https://hub.docker.com/r/dockersamples/visualizer
