@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-echo '1. ~/.ssh/config.d/vagrant_swarmgs'
-cat ~/.ssh/config.d/vagrant_swarmgs 
+echo '[WHAT] check if ssh config setup'
+stat ~/.ssh/config.d/vagrant_swarmgs
 echo
 
-echo '2. matching docker contexts'
-docker context list | grep "^[wm]\d*"
-echo
+echo '[WHAT] docker context list'
+docker context list --format "table {{.Name}}	{{.StackOrchestrator}}	{{.DockerEndpoint}}	{{.Description}}"
