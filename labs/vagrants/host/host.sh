@@ -9,11 +9,7 @@ echo '2. write vagrant ssh config options for faster, native/direct ssh access t
 vagrant ssh-config ${running_vms_space_delimited} > ~/.ssh/config.d/vagrant_swarmgs
 echo
 
-echo '3. remove existing contexts starting with `w` or `m`'
-docker context rm $(docker context list -q | grep '^[wm]')
-echo 
-
-echo '4. adding docker ssh contexts for running vms'
+echo '3. adding docker ssh contexts for running vms (unless they already exist in which case this is ignored and thus idempotent')
 for vm in $running_vms; do 
   docker context create \
     --docker "host=ssh://$vm" \
