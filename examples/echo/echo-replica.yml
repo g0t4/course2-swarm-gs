@@ -1,0 +1,10 @@
+---
+version: "3"
+
+services:
+  echo:
+    image: weshigbee/swarmgs2-echo
+    ports:
+      - "9090:80/tcp"
+    deploy:
+      mode: replicated
