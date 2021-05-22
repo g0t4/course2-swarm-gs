@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# use `vagrant ssh m1` if contexts aren't setup, it's the same thing
 docker -c m1 \
   container run -d \
   -p "8080:8080/tcp" \
