@@ -8,7 +8,7 @@ echo
 echo '## config native ssh access via `vagrant ssh-config`'
 echo '##   native is faster'
 echo '##   necessary for docker ssh context'
-vagrant ssh-config $running_vms_spaced > ~/.ssh/config.d/vagrant_swarmgs
+vagrant ssh-config $running_vms_spaced > ~/.ssh/config.d/autos_swarmgs
 echo
 
 echo '## creating docker contexts to running vms'

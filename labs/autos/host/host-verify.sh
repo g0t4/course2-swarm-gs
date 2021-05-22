@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "## check if ssh config partial exists:"
-stat ~/.ssh/config.d/vagrant_swarmgs
+stat ~/.ssh/config.d/autos_swarmgs
 echo
 
 echo "## list docker contexts"

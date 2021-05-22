@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "## removing native ssh config to VMs"
-rm ~/.ssh/config.d/vagrant_swarmgs 
+rm ~/.ssh/config.d/autos_swarmgs 
 echo
 
 echo "## finding all VM names"
