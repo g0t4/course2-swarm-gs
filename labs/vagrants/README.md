@@ -76,3 +76,27 @@ vagrant box --help
 vagrant box list # show a listing of all local boxes
 
 ```
+
+## Notes
+
+- FYI `vagrant ssh ..` works just fine for the entire course, no need to use contexts if they cause you any grief, just move no, it's a nicety is all.
+- See [autos README](../autos/README.md) for more about static ssh ports change
+
+## vagrant box selection 
+
+- [`official ubuntu org`](https://app.vagrantup.com/ubuntu/) boxes chosen
+- [ubuntu releases](https://wiki.ubuntu.com/Releases) 
+- suggested alternate boxes (at time of recording):
+  - 21.04: https://app.vagrantup.com/ubuntu/boxes/hirsute64
+  - 20.04 (current LTS): ubuntu/focal64
+  - 22.04 (next LTS): ubuntu/jj # NOT OUT YET
+
+## relevant vagrant links
+
+- docs: https://docs.vagrantup.com.
+- box search: https://vagrantcloud.com/search.
+
+## relevant docker links
+
+- convenience install script: https://get.docker.com
+- linux (engine) install docs: https://docs.docker.com/engine/install/
