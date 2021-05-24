@@ -9,7 +9,3 @@ docker service create \
   --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
   dockersamples/visualizer
 
-
-## Stack approach
-
-docker stack deploy -c viz.yml
