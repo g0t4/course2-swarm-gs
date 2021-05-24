@@ -11,7 +11,10 @@ Vagrant.configure('2') do |config|
       node.vm.network 'forwarded_port', id: 'ssh', host: "810#{number}", guest: "22"
       node.vm.hostname = "m#{number}"
 
+      # vagrant ordering of script execution is out -> in
+      # so all top level provision calls happen before nested and thus this will run after docker is installed 
       if number == 1
+        node.vm.provision 'shell', path: 'scripts/m1-viz-standalone-container'
         node.vm.provision 'shell', path: 'scripts/m1-swarm-init.sh'
       else
         node.vm.provision 'shell', path: 'scripts/manager-join.sh'
@@ -32,6 +35,7 @@ Vagrant.configure('2') do |config|
   
   # tweak vm settings to optimize for your machine:
   config.vm.provider 'virtualbox' do |vb|
+    # nest inside loops above for targeting mX and wX nodes or use conditionals to one off set values like the provisioner scripts
     vb.memory = '4096'
     vb.cpus = 2
   end

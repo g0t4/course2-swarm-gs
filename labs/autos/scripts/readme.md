@@ -12,7 +12,9 @@ The rest of the scripts are for learning, run them to follow along.
 
 Remember:
 - `vagrant ssh m1` or whatever VM you want is the easiest way 
+  - help: `vagrant help ssh`
 - if you have it setup:
   - `ssh m1` is faster
   - `docker -c m1` is most transparent
+- ssh has `ssh -c` to run one-off commands too
 - all operate over ssh!
