@@ -2,12 +2,17 @@
 
 ## Instructions
 
-- run `vagrant up m1` first 
+- create m1 first: `vagrant up m1` 
   - through to `docker swarm init` completing
   - creates /vagrant/worker.token & /vagrant/manager.token
-- start other VMs in whatever order (even in parallel!)
+  - now the rest are ready to be created
+- create rest of VMs in whatever order
+  - in parallel is best! `vagrant up --parallel`
+    - assuming your provider supports it
+    - otherwise `vagrant up` for the rest
   - each reads respective /vagrant/*.token and joins network 
-
+- fully automate batch the commands:
+  - `vagrant up m1 && vagrant up --parallel`
 ## Notable features
 
 - IP addresses adjusted to avoid conflicts with `vagrants` VMs

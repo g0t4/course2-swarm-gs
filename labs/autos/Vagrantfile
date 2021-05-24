@@ -14,7 +14,7 @@ Vagrant.configure('2') do |config|
       # vagrant ordering of script execution is out -> in
       # so all top level provision calls happen before nested and thus this will run after docker is installed 
       if number == 1
-        node.vm.provision 'shell', path: 'scripts/m1-viz-standalone-container'
+        node.vm.provision 'shell', path: 'scripts/m1-viz-standalone-container.sh'
         node.vm.provision 'shell', path: 'scripts/m1-swarm-init.sh'
       else
         node.vm.provision 'shell', path: 'scripts/manager-join.sh'
