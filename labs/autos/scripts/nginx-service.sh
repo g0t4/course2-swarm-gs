@@ -12,5 +12,12 @@ docker service create \
 
 
 
-## Watching the weby service with a custom column format:
+## commands:
+
+# watches should be run in VM for performance 
+# or slow down frequency of checking (ie -n 2)
 watch -t -d -n 0.5 'docker service ps --format "table {{.ID}}\t{{.Name}}\t{{.Node}}\t{{.DesiredState}}\t{{.CurrentState}}" weby'
+
+
+
+docker service logs weby
