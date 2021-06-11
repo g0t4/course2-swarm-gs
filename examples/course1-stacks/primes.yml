@@ -1,7 +1,0 @@
-version: "3"
-
-services:
-  primes:
-    image: swarmgs/nodewebstress
-    ports:
-      - "3000:3000"
