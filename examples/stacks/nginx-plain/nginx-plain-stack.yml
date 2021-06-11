@@ -7,6 +7,4 @@ services:
   nginx:
     image: nginx
     ports:
-      - "9080:80/tcp"
-    deploy:
-      replicas: 1
+      - "8200:80"

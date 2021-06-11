@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker service create plain-nginx \
-  --publish=9080:80/tcp \
-  --replicas=1 \
+docker service create \
+  --name plain-nginx \
+  --publish 8200:80 \
   nginx 

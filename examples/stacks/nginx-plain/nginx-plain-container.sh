@@ -2,5 +2,5 @@
 
 docker container run \
   --name plain-nginx \
-  --publish 9080:80 \
+  --publish 8200:80 \
   nginx
