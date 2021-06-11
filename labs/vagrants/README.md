@@ -2,7 +2,7 @@
 
 1. Install `vagrant`
 2. Install `VirtualBox` or another hypervisor
-3. If you don't use `VirutalBox` you'll need to provide the hypervisor to vagrant via - CLI arg: vagrant up **--provider <hypervisor>** 
+3. If you don't use `VirtualBox` you'll need to provide the hypervisor to vagrant via - CLI arg: vagrant up **--provider <hypervisor>** 
 - env var: `VAGRANT_PROVIDER`
 
 ## Commands
