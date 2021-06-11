@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 docker service create \
-  --name plain-nginx \
+  --name weby \
   --publish 8200:80 \
   nginx 
