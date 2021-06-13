@@ -6,4 +6,4 @@ services:
   weby:
     image: nginx
     ports:
-      - "8300:80"
+      - "8200:80"
