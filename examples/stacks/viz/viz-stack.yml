@@ -5,14 +5,13 @@ services:
   web:
     image: dockersamples/visualizer
     ports:
-    - "8080:8080/tcp"    
+      - "8080:8080/tcp"
     volumes:
-    - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
       placement:
         constraints:
-        - "node.role == manager"
-
+          - "node.role == manager"
 ## Notes
 # https://github.com/dockersamples/docker-swarm-visualizer
 # built with javascript, easily modified
