@@ -12,7 +12,3 @@ services:
       placement:
         constraints:
           - "node.role == manager"
-## Notes
-# https://github.com/dockersamples/docker-swarm-visualizer
-# built with javascript, easily modified
-# https://hub.docker.com/r/dockersamples/visualizer
