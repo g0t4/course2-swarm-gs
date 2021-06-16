@@ -4,4 +4,7 @@
     "swarmgs",
     "weby"
   ],
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "*stack.yml"
+  }
 }
