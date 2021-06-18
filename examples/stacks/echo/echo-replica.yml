@@ -11,5 +11,4 @@ services:
     deploy:
       mode: replicated
       replicas: 2
-    hostname: "echo-replica-{{.Task.Slot}}"
-
+    hostname: "echo-replica-{{.Node.Hostname}}-{{.Task.Slot}}"
