@@ -5,7 +5,7 @@ services:
   echo:
     image: weshigbee/swarmgs2-echo
     ports:
-      - "9090:80/tcp"
+      - "9091:80/tcp"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
