@@ -10,4 +10,4 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
       mode: global
-    hostname: "echo-global-{{.Task.Slot}}"
+    hostname: "echo-global-{{.Node.Hostname}}"
