@@ -1,0 +1,12 @@
+---
+version: "3.9"
+
+services:
+  echo:
+    image: weshigbee/swarmgs2-webstress
+    ports:
+      - "8400:3000/tcp"
+    deploy:
+      mode: replicated
+      replicas: 5
+    hostname: "stress-replica-{{.Node.Hostname}}-{{.Task.Slot}}"
