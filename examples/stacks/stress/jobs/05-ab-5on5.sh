@@ -10,4 +10,4 @@ docker service create \
   --mode global-job \
   --network sr_testers \
   httpd \
-  ab -n 1000 -c 100 http://sr_web:3000/customer-nodelay/1
+  ab -n 1000 -c 20 http://sr_web:3000/customer-nodelay/1
