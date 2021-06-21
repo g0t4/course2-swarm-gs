@@ -8,9 +8,3 @@ services:
     deploy:
       mode: global-job
     hostname: "ab-version-{{.Node.Hostname}}-{{.Task.Slot}}"
-
-# network would be for running load tests
-networks:
-  default:
-    name: sr_testers
-    external: true
