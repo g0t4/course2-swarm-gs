@@ -5,7 +5,13 @@ services:
   web:
     image: weshigbee/swarmgs2-webstress
     ports:
-      - "8400:3000/tcp"
+      - "3001:3000/tcp"
     deploy:
       mode: global
     hostname: "stress-global-{{.Node.Hostname}}-{{.Task.Slot}}"
+    networks:
+      - testers
+
+networks:
+  testers:
+    attachable: true
