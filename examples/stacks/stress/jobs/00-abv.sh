@@ -1,3 +1,4 @@
+docker service rm abv
 
 docker service create \
   --name abv \

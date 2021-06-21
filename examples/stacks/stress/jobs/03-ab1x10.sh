@@ -1,4 +1,6 @@
 
+docker service rm ab1x10
+
 docker service create \
   --name ab1x10 \
   --mode replicated-job \

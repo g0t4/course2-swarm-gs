@@ -1,6 +1,7 @@
+docker service rm ab5x
 
 docker service create \
-  --name ab1x10 \
+  --name ab5x \
   --mode replicated-job \
   --replicas 5 \
   --network sr_testers \
