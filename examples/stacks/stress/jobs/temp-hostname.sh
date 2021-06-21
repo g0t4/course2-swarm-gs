@@ -15,4 +15,5 @@ docker service create \
 
 docker service logs "${_service_name}"
 
-docker inspect (docker service ps "${_service_name}" -q)
+echo 'optionally run:'
+echo "docker inspect (docker service ps ${_service_name} -q)"
