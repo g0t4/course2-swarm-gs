@@ -6,6 +6,9 @@
 ## Services with Templates
 
 - https://docs.docker.com/engine/reference/commandline/service_create/#create-services-using-templates
+- FYI only for slot 0,
+  - {{.Task.Slot}} renders as {{.Node.ID}}
+  - all other slots render as slot #
 
 ## Other helpful issues/discussions:
 
