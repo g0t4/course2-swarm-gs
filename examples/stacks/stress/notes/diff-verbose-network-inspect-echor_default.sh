@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-_network="ingress"
+_network="echor_default"
 
 icdiff \
   --whole-file \
@@ -8,4 +8,3 @@ icdiff \
   <(docker network inspect ${_network}) \
   --label "docker network inspect --verbose ${_network}" \
   <(docker network inspect --verbose ${_network})
-  
