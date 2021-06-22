@@ -1,0 +1,17 @@
+---
+version: "3.9"
+
+services:
+  web:
+    image: weshigbee/swarmgs2-webstress
+    ports:
+      - "3000:3000/tcp"
+    deploy:
+      mode: replicated
+      replicas: 1
+    networks:
+      - testers
+
+networks:
+  testers:
+    attachable: true
